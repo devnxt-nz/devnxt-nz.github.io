@@ -1,0 +1,35 @@
+
+/* ====== TYPOGRAPHY ====== */
+h1, .h1 { font: 500 2em/1.4 'Montserrat', sans-serif; }
+
+p, ul, li, a, blockquote { font: 300 1em/1.1 'Montserrat', sans-serif; }
+
+
+
+/* ====== STRUCTURE ====== */
+.page { display: grid; grid-auto-flow: row; grid-template-rows: 100vh; }
+
+
+
+/* ====== UI LAYOUT ====== */
+body { margin: 0; }
+section { display: flex; }
+.home { background-color: var(--opal); flex-flow: column; justify-content: center; height: 100%; }
+.home header { display: flex; justify-content: center; }
+.header-logo { width: 50%; }
+
+
+/* ====== COLOURS ====== */
+:root {
+    --platinum: rgb(239, 239, 239);
+    --orange: rgb(245, 70, 25);
+    --opal: rgb(163, 193, 198);
+    --tan: rgb(201, 150, 105);
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 438.95px) {
+    .page { grid-template-rows: 25vh; }
+}
