@@ -1,23 +1,39 @@
 
 /* ====== TYPOGRAPHY ====== */
 h1, .h1 { font: 500 2em/1.4 'Montserrat', sans-serif; }
+h2, .h2 { font: 500 1.33em/1.4 'Montserrat', sans-serif; }
 
-p, ul, li, a, blockquote { font: 300 1em/1.1 'Montserrat', sans-serif; }
+p, ul, li, blockquote { font: 300 0.82em/1.4 'Montserrat', sans-serif; }
+a { color: var(--orange); font: inherit; text-decoration: none; }
 
 
 
 /* ====== STRUCTURE ====== */
-.page { display: grid; grid-auto-flow: row; grid-template-rows: 100vh; }
+.page { display: grid; grid-auto-flow: row; grid-auto-rows: 100vh; }
 
-
+nav { position: fixed; top: 0; width: 100%; }
+nav ul { display: flex; flex-flow: row; justify-content: flex-end; list-style: none; gap: 1em; margin: 0; padding: 2em; }
+nav li { font-size: 1em; }
 
 /* ====== UI LAYOUT ====== */
 body { margin: 0; }
-section { display: flex; }
-.home { background-color: var(--opal); flex-flow: column; justify-content: center; height: 100%; }
+section { display: flex; flex-flow: column; height: 100%; }
+section.platinum { background-color: var(--platinum); }
+section.opal { background-color: var(--opal); }
+section > div { padding: 1em 2em; }
+.home { background-color: var(--opal); justify-content: center; }
 .home header { display: flex; justify-content: center; }
 .header-logo { width: 50%; }
 
+.with-motif { padding: 1em 2em; position: relative; }
+.with-motif.orange { background-color: var(--opal); }
+.with-motif.orange::before { background: transparent url('../img/DevNxt-conference-logo-orange.png') no-repeat right top; background-size: contain; bottom: 0; content: ' '; height: 80%; position: absolute; right: 4em; width: 100%; }
+.with-motif.orange h2 { color: var(--orange); }
+
+.with-motif.platinum { background-color: var(--orange); }
+.with-motif.platinum::before { background: transparent url('../img/DevNxt-conference-logo-platinum.png') no-repeat right top; background-size: contain; bottom: 0; content: ' '; height: 80%; position: absolute; right: 4em; width: 100%; }
+.with-motif.platinum h1 { color: var(--platinum); }
+.with-motif.platinum h2 { color: var(--orange); }
 
 /* ====== COLOURS ====== */
 :root {
@@ -31,5 +47,6 @@ section { display: flex; }
 
 
 @media screen and (max-width: 438.95px) {
-    .page { grid-template-rows: 25vh; }
+    .page { grid-auto-rows: 25vh auto; }
+    .with-motif::before { right: 1.67em !important; }
 }
