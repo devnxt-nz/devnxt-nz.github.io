@@ -10,6 +10,7 @@ a { color: var(--orange); font: inherit; text-decoration: none; }
 
 /* ====== STRUCTURE ====== */
 .page { display: grid; grid-auto-flow: row; grid-auto-rows: 100vh; }
+.speaker-grid { display: grid; justify-items: center; gap: 1em 2em; grid-template-columns: repeat(4, minmax(200px, 1fr)); }
 
 nav { position: fixed; top: 0; width: 100%; }
 nav ul { display: flex; flex-flow: row; justify-content: flex-end; list-style: none; gap: 1em; margin: 0; padding: 2em; }
@@ -48,5 +49,6 @@ section > div { padding: 1em 2em; }
 
 @media screen and (max-width: 438.95px) {
     .page { grid-auto-rows: 25vh auto; }
+    .speaker-grid { grid-template-columns: 1fr; gap: 1em; }
     .with-motif::before { right: 1.67em !important; }
 }
