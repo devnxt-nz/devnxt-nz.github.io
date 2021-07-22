@@ -1,3 +1,4 @@
+html { scroll-behavior: smooth; }
 
 /* ====== TYPOGRAPHY ====== */
 h1, .h1 { font: 500 2em/1.4 'Montserrat', sans-serif; }
