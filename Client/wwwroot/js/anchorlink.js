@@ -10,3 +10,14 @@ window.anchorLink = {
         }
     }
 }
+
+document.addEventListener('scroll', function(e) {
+
+    var nav = document.getElementsByTagName("nav")[0];
+    if (window.scrollY > 0){
+        nav.classList.add("scroll");
+    } else {
+        nav.classList.remove("scroll");
+    }
+
+});
