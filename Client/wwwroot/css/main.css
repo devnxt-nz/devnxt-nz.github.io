@@ -11,14 +11,17 @@ footer a { color: inherit; }
 
 .speaker h3 { color: var(--platinum); }
 
+.byline { color: var(--platinum); font-size: 1.4em; font-weight: 500; }
 
 /* ====== STRUCTURE ====== */
 .page { display: grid; grid-auto-flow: row; grid-auto-rows: 100vh; }
-.speaker-grid { display: grid; justify-items: center; gap: 1em 2em; grid-template-columns: repeat(4, minmax(200px, 1fr)); }
+.speaker-grid { display: grid; justify-items: center; gap: 1em 2em; grid-template-columns: repeat(4, minmax(200px, 1fr)); margin: 0 auto; width: 67%; }
 
 nav { background-color: transparent; position: fixed; top: 0; width: 100%; z-index: 3; transition: background-color 1.25s linear; }
 nav ul { display: flex; flex-flow: row; justify-content: flex-end; list-style: none; gap: 1em; margin: 0; padding: 2em; }
 nav li { font-size: 1em; }
+
+.home > div { display: flex; align-items: center; flex-flow: column; }
 
 footer { padding: 2em 2em 4em; }
 
@@ -39,6 +42,15 @@ nav.scroll { background-color: var(--platinum); }
 .platinum { background-color: var(--platinum); }
 .tan { background-color: var(--tan); }
 
+.cta .button { background-color: var(--platinum);
+    border: 1px solid var(--opal);
+    border-radius: 4px;
+    color: var(--orange);
+    font-size: 1em;
+    padding: .75em 1.25em;
+    text-transform: uppercase;
+    font-family: 'Montserrat'; }
+
 .with-motif { padding: 1em 2em; position: relative; }
 .with-motif.orange::before { background: transparent url('../img/DevNxt-conference-logo-platinum.png') no-repeat right top; background-size: contain; bottom: 0; content: ' '; height: 80%; position: absolute; right: 4em; width: 100%; }
 .with-motif.orange h2, .with-motif.orange h1 { color: var(--platinum); }
@@ -53,9 +65,11 @@ nav.scroll { background-color: var(--platinum); }
 .with-motif.tan h1, .with-motif.tan h2 { color: var(--platinum); }
 
 
-.speaker { position: relative; background-color: var(--opal); display: flex; flex-flow: column; justify-content: space-between; max-width: 260px; }
-.speaker h3 { padding: 0 1em; }
-.speaker .box { align-self: flex-start; background-color: var(--orange); max-width: 33%; padding: 2em 1em; }
+.speaker { position: relative; background-color: var(--opal); display: flex; flex-flow: column; justify-content: space-between; width: 240px; }
+.speaker h3, .speaker p { padding: 0 1em; }
+
+.speaker .box { align-self: flex-start; background-color: var(--orange); max-width: 33%; padding: 2em 1em; position: relative; }
+.speaker img { width: 100%; }
 
 footer { color: var(--platinum); display: flex; justify-content: space-around; }
 .social ul, .links ul { list-style: none; }
@@ -71,8 +85,21 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
 }
 
 
+@media screen and (max-width: 1039.999px) {
+    .speaker-grid { width: unset; }
+    .speaker { width: 100%; }
+}
+
+
 @media screen and (max-width: 438.95px) {
-    .page { grid-auto-rows: 25vh auto; }
-    .speaker-grid { grid-template-columns: 1fr; gap: 1em; }
+    .page { grid-auto-rows: minmax(min-content, 48vh); }
+    .speaker-grid { grid-template-columns: 82%; gap: 1em; justify-content: center; }
     .with-motif::before { right: 1.67em !important; }
+
+    .home { gap: 1em; }
+
+    .byline { font-size: 1em; text-align: center; }
+
+    .speaker { width: 100%; }
+    .speaker .box { width: 40%; }
 }

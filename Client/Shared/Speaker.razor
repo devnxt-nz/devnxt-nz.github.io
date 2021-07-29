@@ -1,12 +1,17 @@
 <div class="speaker">
-    <h3>@Name</h3>
+    <h3>@Presenting.Name</h3>
+    <p class="social">@Presenting.Social</p>
+    <p>@Presenting.Title</p>
+    <p>@Presenting.Bio</p>
     <div class="box">
-        <p>Speaker bio here</p>
+        <img src="@Presenting.Image" alt="@Presenting.Name profile photo" />
     </div>
 </div>
 
 @code {
 
     [Parameter]
-    public string Name { get; set; }
+    public Presenter Presenting { get; set; }
+
+
 }

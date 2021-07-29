@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject HttpClient Http
 
 <NavMenu />
 
@@ -6,6 +7,14 @@
     <header>
         <img src="/img/DevNxt-logo-orange.png" alt="DevNxt conference logo" class="header-logo">
     </header>
+    <div>
+        <p class="byline">
+            NZ&rsquo;s premier tech leadership and career growth conference!
+        </p>
+        <div class="cta">
+            <a href="#" class="button">Purchase tickets</a>
+        </div>
+    </div>
 </section>
 <section class="platinum">
     <header id="speakers" class="with-motif orange">
@@ -14,9 +23,15 @@
     <div>
         <h2>Our 2022 Speakers</h2>
         <div class="speaker-grid">
-            @for(int i = 0; i < 8; i++){
-                string speakerName = $"Speaker {i}";
-                <Speaker Name=@speakerName />
+            @if (speakers == null)
+            {
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
+                foreach(Presenter speaker in speakers){
+                    <Speaker Presenting=@speaker />
+                }
             }
         </div>
     </div>
@@ -32,3 +47,14 @@
         </div>
     </div>
 </section>
+
+
+@code {
+    private Presenter[] speakers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        speakers = await Http.GetFromJsonAsync<Presenter[]>("sample-data/speaker-data.json");
+    }
+
+}
