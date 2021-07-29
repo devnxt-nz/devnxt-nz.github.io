@@ -11,7 +11,7 @@ footer a { color: inherit; }
 
 .speaker h3 { color: var(--platinum); }
 
-.byline { color: var(--platinum); font-size: 1.4em; font-weight: 500; }
+.byline { color: var(--platinum); font-size: 1.4em; font-weight: 500; text-align: end; }
 
 /* ====== STRUCTURE ====== */
 .page { display: grid; grid-auto-flow: row; grid-auto-rows: 100vh; }
@@ -20,8 +20,9 @@ footer a { color: inherit; }
 nav { background-color: transparent; position: fixed; top: 0; width: 100%; z-index: 3; transition: background-color 1.25s linear; }
 nav ul { display: flex; flex-flow: row; justify-content: flex-end; list-style: none; gap: 1em; margin: 0; padding: 2em; }
 nav li { font-size: 1em; }
+nav .primary { border: 1px solid var(--orange); color: var(--white); border-radius: 0.3em; padding: 0.2em 0.4em; background-color: var(--orange);}
 
-.home > div { display: flex; align-items: center; flex-flow: column; }
+
 .cta { display: grid; grid-auto-flow: column; }
 
 footer { padding: 2em 2em 4em; }
@@ -32,11 +33,16 @@ section { display: flex; flex-flow: column; height: 100%; }
 section.platinum { background-color: var(--platinum); }
 section.opal { background-color: var(--opal); }
 section > div { padding: 1em 2em; }
-.home { background-color: var(--opal); justify-content: center; }
-.home header { display: flex; justify-content: center; }
-.header-logo { width: 50%; }
+
+.home {  justify-content: center; flex-flow: row;}
+.right-opal-box header { display: flex; justify-content: center; }
+.header-logo { width: 99%; }
 
 nav.scroll { background-color: var(--platinum); }
+
+.left-image-fill{ padding: 0; height: 100%; width: 60%; outline: red; background: url('/img/home-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: 20% top;}
+.right-opal-box{ background: var(--opal); display: flex; width: 40%; align-self: flex-end; height: 100%; flex-flow: column; padding: 20% 2em 0 2em; box-sizing: border-box;}
+.right-opal-box > div { display: flex; align-items: center; flex-flow: column; }
 
 .opal { background-color: var(--opal); }
 .orange { background-color: var(--orange); }
@@ -51,6 +57,9 @@ nav.scroll { background-color: var(--platinum); }
     padding: .75em 1.25em;
     text-transform: uppercase;
     font-family: 'Montserrat'; }
+
+/* primar CTA button should always be orange because behavioural science */
+.cta .button.primary{ background-color: var(--orange); color: var(--platinum);}  
 
 .with-motif { padding: 1em 2em; position: relative; }
 .with-motif.orange::before { background: transparent url('../img/DevNxt-conference-logo-platinum.png') no-repeat right top; background-size: contain; bottom: 0; content: ' '; height: 80%; position: absolute; right: 4em; width: 100%; }
@@ -78,11 +87,13 @@ nav.scroll { background-color: var(--platinum); }
 footer { color: var(--platinum); display: flex; justify-content: space-around; }
 .social ul, .links ul { list-style: none; }
 
+
 /* ====== COLOURS ====== */
 :root {
     --platinum: rgb(239, 239, 239);
     --orange: rgb(245, 70, 25);
     --opal: rgb(163, 193, 198);
+    --opal-t: rgba(163, 193, 198, 0.9);
     --tan: rgb(201, 150, 105);
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
@@ -92,6 +103,9 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
 @media screen and (max-width: 1039.999px) {
     .speaker-grid { width: unset; }
     .speaker { width: 100%; }
+
+    .right-opal-box{ width: 100%; padding-top: 40%; z-index: 2; background: var(--opal-t);}
+    .left-image-fill{position: absolute; width: 100%; z-index:-1; height: 100vh;}
 }
 
 
