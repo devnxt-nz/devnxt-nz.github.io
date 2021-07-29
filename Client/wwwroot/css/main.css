@@ -21,7 +21,9 @@ nav { background-color: transparent; position: fixed; top: 0; width: 100%; z-ind
 nav ul { display: flex; flex-flow: row; justify-content: flex-end; list-style: none; gap: 1em; margin: 0; padding: 2em; }
 nav li { font-size: 1em; }
 nav .primary { border: 1px solid var(--orange); color: var(--white); border-radius: 0.3em; padding: 0.2em 0.4em; background-color: var(--orange);}
-
+nav a{ color: var(--platinum);}
+nav.scroll a{ color: var(--orange);}
+nav.scroll a.primary{ color: var(--white);}
 
 .cta { display: grid; grid-auto-flow: column; }
 
@@ -43,6 +45,21 @@ nav.scroll { background-color: var(--platinum); }
 .left-image-fill{ padding: 0; position: absolute; width: 100%; z-index:-1; height: 100vh; background: url('/img/home-bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: 20% top;}
 .right-opal-box { align-items: center; background: var(--opal-t); display: flex; width: 100%; z-index: 2; align-self: flex-end; height: 100%; flex-flow: column; padding: 10% 2em 0 2em; box-sizing: border-box;}
 .right-opal-box > div { display: flex; align-items: center; flex-flow: column; }
+
+
+/* .right-opal-box{
+  height: 50vh;
+  padding: 15vh 2em 0 2em;
+}
+.header-logo{
+  width: inherit;
+  height: 25vh;
+}
+.left-image-fill{
+}
+section.home{ flex-flow: column-reverse; }
+.cta{ margin-top: 5vh;} */
+
 
 .opal { background-color: var(--opal); }
 .orange { background-color: var(--orange); }
@@ -94,7 +111,7 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
     --platinum: rgb(239, 239, 239);
     --orange: rgb(245, 70, 25);
     --opal: rgb(163, 193, 198);
-    --opal-t: rgba(163, 193, 198, 0.9);
+    --opal-t: rgba(163, 193, 198, 0.5);
     --tan: rgb(201, 150, 105);
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
