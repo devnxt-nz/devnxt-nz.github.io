@@ -22,6 +22,7 @@ nav ul { display: flex; flex-flow: row; justify-content: flex-end; list-style: n
 nav li { font-size: 1em; }
 
 .home > div { display: flex; align-items: center; flex-flow: column; }
+.cta { display: grid; grid-auto-flow: column; }
 
 footer { padding: 2em 2em 4em; }
 
@@ -71,6 +72,9 @@ nav.scroll { background-color: var(--platinum); }
 .speaker .box { align-self: flex-start; background-color: var(--orange); max-width: 33%; padding: 2em 1em; position: relative; }
 .speaker img { width: 100%; }
 
+.signatories { display: flex; justify-content: flex-end; gap: 2em; margin-right: 2em; }
+.signatories > p { font-weight: 500; }
+
 footer { color: var(--platinum); display: flex; justify-content: space-around; }
 .social ul, .links ul { list-style: none; }
 
@@ -92,13 +96,14 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
 
 
 @media screen and (max-width: 438.95px) {
-    .page { grid-auto-rows: minmax(min-content, 48vh); }
+    .page { grid-auto-rows: minmax(min-content, 67vh); }
     .speaker-grid { grid-template-columns: 82%; gap: 1em; justify-content: center; }
     .with-motif::before { right: 1.67em !important; }
 
     .home { gap: 1em; }
 
     .byline { font-size: 1em; text-align: center; }
+    .cta { grid-auto-flow: row; gap: 0.33em; }
 
     .speaker { width: 100%; }
     .speaker .box { width: 40%; }
