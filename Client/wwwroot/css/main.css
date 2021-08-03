@@ -14,7 +14,7 @@ footer a { color: inherit; }
 .byline { color: var(--platinum); font-size: 1.4em; font-weight: 500; text-align: end; }
 
 /* ====== STRUCTURE ====== */
-.page { display: grid; grid-auto-flow: row; grid-auto-rows: 100vh; }
+.page { display: grid; grid-auto-flow: row; grid-auto-rows: minmax(100vh, min-content); }
 .speaker-grid { display: grid; justify-items: center; gap: 1em 2em; grid-template-columns: repeat(4, minmax(200px, 1fr)); margin: 0 auto; width: 67%; }
 
 nav { background-color: transparent; position: fixed; top: 0; width: 100%; z-index: 3; transition: background-color 1.25s linear; }
@@ -117,6 +117,9 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
     --white: rgb(255, 255, 255);
 }
 
+@media screen and (min-width: 1339.99px) {
+  .speaker-grid { width: 80%; }
+}
 
 @media screen and (max-width: 1039.999px) {
     .speaker-grid { width: unset; }
