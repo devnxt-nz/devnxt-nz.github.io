@@ -32,8 +32,10 @@ footer { padding: 2em 2em 4em; }
 /* ====== UI LAYOUT ====== */
 body { margin: 0; }
 section { display: flex; flex-flow: column; height: 100%; }
-section.platinum { background-color: var(--platinum); }
-section.opal { background-color: var(--opal); }
+section.platinum { background-color: var(--platinum); color: var(--orange);}
+section.opal { background-color: var(--opal); color: var(--black); }
+section.orange { background-color: var(--orange); color: var(--platinum);}
+section.tab { background-color: var(--tan); color: var(--platinum);}
 section > div { padding: 1em 2em; }
 
 .home {  justify-content: center; flex-flow: row;}
@@ -46,6 +48,10 @@ nav.scroll { background-color: var(--platinum); }
 .right-opal-box { align-items: center; background: var(--opal-t); display: flex; width: 100%; z-index: 2; align-self: flex-end; height: 100%; flex-flow: column; padding: 10% 2em 0 2em; box-sizing: border-box;}
 .right-opal-box > div { display: flex; align-items: center; flex-flow: column; }
 
+p.jumbo{
+  margin: auto;
+  font-size: 400%;
+}
 
 /* .right-opal-box{
   height: 50vh;
@@ -65,16 +71,19 @@ section.home{ flex-flow: column-reverse; }
 .orange { background-color: var(--orange); }
 .platinum { background-color: var(--platinum); }
 .tan { background-color: var(--tan); }
+.tan-t { background-color: var(--tan-t); }
 
 .cta .button { background-color: var(--platinum);
-    border: 1px solid var(--opal);
+    border: 1px solid var(--platinum);
     border-radius: 4px;
     color: var(--orange);
-    font-size: 1em;
+    font-size: 16px;
     margin: 0.25em 0.5em;
     padding: .75em 1.25em;
     text-transform: uppercase;
-    font-family: 'Montserrat'; }
+    font-family: 'Montserrat'; 
+    font-weight: 400;
+  }
 
 /* primar CTA button should always be orange because behavioural science */
 .cta .button.primary{ background-color: var(--orange); color: var(--platinum);}  
@@ -92,6 +101,7 @@ section.home{ flex-flow: column-reverse; }
 .with-motif.tan::before { background: transparent url('../img/DevNxt-conference-logo-platinum.png') no-repeat right top; background-size: contain; bottom: 0; content: ' '; height: 80%; position: absolute; right: 4em; width: 100%; }
 .with-motif.tan h1, .with-motif.tan h2 { color: var(--platinum); }
 
+.orange p.with-motif::before { background: transparent url('../img/DevNxt-conference-logo-platinum.png') no-repeat left center; background-size: 0.7em; top: 1em; content: ' '; height: 40%; position: absolute; right: 0em; width: 100%; }
 
 .speaker { position: relative; background-color: var(--opal); display: flex; flex-flow: column; justify-content: space-between; width: 240px; }
 .speaker h3, .speaker p { padding: 0 1em; }
@@ -105,6 +115,13 @@ section.home{ flex-flow: column-reverse; }
 footer { color: var(--platinum); display: flex; justify-content: space-around; }
 .social ul, .links ul { list-style: none; }
 
+.wordy {
+  columns: 2;
+}
+.wordy p{
+  font-size: 1em;
+  line-height: 1.6;
+}
 
 /* ====== COLOURS ====== */
 :root {
@@ -113,6 +130,7 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
     --opal: rgb(163, 193, 198);
     --opal-t: rgba(163, 193, 198, 0.5);
     --tan: rgb(201, 150, 105);
+    --tan-t: rgba(201, 150, 105, 0.6);
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
 }
