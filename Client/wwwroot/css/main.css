@@ -144,6 +144,8 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
     .speaker { width: 100%; }
 
     .right-opal-box{ padding-top: 40%; }
+    .wordy { columns: inherit; }
+
 }
 
 
@@ -162,4 +164,6 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
 
     .speaker { width: 100%; }
     .speaker .box { width: 40%; }
+
+    .wordy { columns: inherit; }
 }
