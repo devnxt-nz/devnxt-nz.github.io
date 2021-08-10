@@ -36,7 +36,7 @@ section.platinum { background-color: var(--platinum); color: var(--orange);}
 section.opal { background-color: var(--opal); color: var(--black); }
 section.orange { background-color: var(--orange); color: var(--platinum);}
 section.tab { background-color: var(--tan); color: var(--platinum);}
-section > div { padding: 1em 2em; }
+section > div { color: var(--black); padding: 1em 2em; }
 
 .home {  justify-content: center; flex-flow: row;}
 .right-opal-box header { display: flex; justify-content: center; width: 74%; }
