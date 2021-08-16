@@ -121,6 +121,7 @@ footer { color: var(--platinum); display: flex; justify-content: space-around; }
 .wordy p{
   font-size: 1em;
   line-height: 1.6;
+  break-inside: avoid;
 }
 
 /* ====== COLOURS ====== */
