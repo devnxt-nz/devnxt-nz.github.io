@@ -13,9 +13,12 @@ footer a { color: inherit; }
 
 .byline { color: var(--platinum); font-size: 1.4em; font-weight: 500; }
 
+.small { }
+header .stamp { }
+
 /* ====== STRUCTURE ====== */
 .page { display: grid; grid-auto-flow: row; grid-auto-rows: minmax(100vh, min-content); }
-.speaker-grid { display: grid; justify-items: center; gap: 1em 2em; grid-template-columns: repeat(4, minmax(200px, 1fr)); margin: 0 auto; width: 67%; }
+.speaker-grid { display: grid; justify-items: center; gap: 1em 2em; grid-template-columns: repeat(4, minmax(200px, 1fr)); margin: 0 auto; max-width: 82%; min-width: 67%; }
 
 nav { background-color: transparent; position: fixed; top: 0; width: 100%; z-index: 3; transition: background-color 1.25s linear; }
 nav ul { display: flex; flex-flow: row; justify-content: flex-end; list-style: none; gap: 1em; margin: 0; padding: 2em; }
@@ -107,14 +110,23 @@ section.home > div { width: 50%; z-index: 2; }
 footer { color: var(--platinum); display: flex; justify-content: space-around; }
 .social ul, .links ul { list-style: none; }
 
-.wordy {
+/* .wordy {
   columns: 2;
 }
 .wordy p{
   font-size: 1em;
   line-height: 1.6;
   break-inside: avoid;
-}
+} */
+
+.longform-text p { font-size: 1em; line-height: 1.54; break-inside: avoid; }
+.longform-text img { background-color: var(--white); float: right;
+  width: 40%;
+  margin: 0em;
+      margin-left: 0em;
+  border: 1px solid var(--opal-t);
+  padding: 0.5em;
+  margin-left: 1em; }
 
 /* ====== COLOURS ====== */
 :root {
