@@ -64,7 +64,7 @@ nav .nav-links { font-size: 0.92rem; gap: 1rem; justify-content: flex-end; }
 /* === timeline === */
 .timeline { list-style: none; }
 .timeline li { align-items: center; display: flex; gap: 0.7rem; }
-.timeline time { border: 1px solid var(--tan); border-radius: 1rem; font-size: 72%; height: 100%; padding: 0.25rem 0.75rem; min-width: 40%; }
+.timeline time { border: 1px solid var(--tan); border-radius: 1rem; font-size: 72%; height: 100%; padding: 0.25rem 0.75rem; min-width: 40%; white-space: nowrap; }
 .timeline p { font-size: 0.8rem; margin-bottom: 0; }
 
 
@@ -77,6 +77,7 @@ figure img { height: inherit; object-fit: cover; }
 .img-clip { clip-path: polygon(0% 0%, 33.5% 0%, 33.5% 20%, 67% 20%, 67% 40%, 100% 40%, 100% 60%, 67% 60%, 67% 80%, 33.5% 80%, 33.5% 100%, 0% 100%, 0% 80%, 20% 80%, 33% 80%, 33.5% 60%, 67% 60%, 67% 40%, 33.5% 40%, 33.5% 20%, 0% 20%) ; }
 
 .hero-strip { background-image: url('https://source.unsplash.com/QckxruozjRg'); background-attachment: fixed; background-size: cover; height: 340px; }
+.speaker-profiles { align-items: center; }
 .speaker { display: flex; gap: 1rem; }
 .speaker .frame { padding-top: 0; }
 
