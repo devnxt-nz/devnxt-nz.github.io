@@ -30,6 +30,7 @@ ul.horizontal { align-items: center; display: flex; justify-content: space-evenl
 main > header { padding-bottom: 2rem; }
 header figure { margin: 0; max-height: 3rem; }
 header nav { align-items: center; margin-right: 4rem; }
+section header .h1 { margin-top: 2rem; }
 
 .splash-wrapper { background-color: var(--opal); }
 .splash.grid { grid-template-columns: 1fr 3fr; gap: 1.5rem; align-items: center; padding: 1rem 2rem; }
@@ -74,6 +75,9 @@ figure { height: 100%; width: 100%; }
 figure img { height: inherit; object-fit: cover; }
 .frame { align-items: center; display: flex; height: unset; justify-content: center; margin-bottom: 2rem; padding: 2.25rem; }
 .frame img { object-fit: unset; }
+
+.logos figure { height: unset; }
+
 .img-clip { clip-path: polygon(0% 0%, 33.5% 0%, 33.5% 20%, 67% 20%, 67% 40%, 100% 40%, 100% 60%, 67% 60%, 67% 80%, 33.5% 80%, 33.5% 100%, 0% 100%, 0% 80%, 20% 80%, 33% 80%, 33.5% 60%, 67% 60%, 67% 40%, 33.5% 40%, 33.5% 20%, 0% 20%) ; }
 
 .hero-strip { background-image: url('https://source.unsplash.com/QckxruozjRg'); background-attachment: fixed; background-size: cover; height: 340px; }
