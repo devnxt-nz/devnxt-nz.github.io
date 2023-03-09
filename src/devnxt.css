@@ -8,6 +8,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .byline { font-family: 'Montserrat'
 h1, .h1 { font-size: 220%; font-weight: 500; line-height: 1.4; }
 h2, .h2 { margin-bottom: 1.25rem; }
 h3, .h3 { font-size: 140%; font-weight: 500; line-height: 1.15; }
+h4, .h4 { font-size: 120%; line-height: 1.15; margin: 0.5 0 0.25; }
 
 .byline { position: relative; color: var(--platinum); }
 .column-break { columns: 2; column-gap: 10%; }
@@ -65,7 +66,7 @@ nav .nav-links { font-size: 0.92rem; gap: 1rem; justify-content: flex-end; }
 
 /* === timeline === */
 .timeline { list-style: none; }
-.timeline li { align-items: center; display: flex; gap: 0.7rem; }
+.timeline li { align-items: center; display: flex; gap: 0.7rem; margin: 0.25rem 0; }
 .timeline time { border: 1px solid var(--tan); border-radius: 1rem; font-size: 72%; height: 100%; padding: 0.25rem 0.75rem; min-width: 40%; white-space: nowrap; }
 .timeline p { font-size: 0.8rem; margin-bottom: 0; }
 
