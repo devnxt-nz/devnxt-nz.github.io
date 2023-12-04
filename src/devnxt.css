@@ -12,7 +12,9 @@ h4, .h4 { font-size: 120%; line-height: 1.15; margin: 0.5 0 0.25; }
 
 .byline { position: relative; color: var(--platinum); }
 .column-break { columns: 2; column-gap: 10%; }
-.bg-dark > *, .bg-orange > * { color: inherit; }
+.bg-dark > *, .bg-orange > *, .bg-tan > *  { color: inherit; }
+.bg-platinum h2, .bg-platinum h3 { color: var(--orange); }
+
 
 .splash article p { text-align: center; }
 .card { margin: calc(var(--block-spacing-vertical) / 2) auto; width: 80%; }
@@ -22,6 +24,7 @@ h2 a, .h2 a { color: inherit; text-decoration: none; }
 a:is([aria-current],:hover,:active,:focus) { text-decoration: unset; }
 a:is([aria-current],:hover) article > * { text-decoration: none; } 
 a:is([aria-current],:hover) article:hover { background-color: var(--opal); } 
+a.contrast { text-decoration: none;}
 
 .unstyled-list, .unstyled-list li { list-style: none; margin: 0; padding: 0; }
 ul.horizontal { align-items: center; display: flex; justify-content: space-evenly; }
@@ -79,6 +82,7 @@ figure img { height: inherit; object-fit: cover; }
 .frame img { object-fit: unset; }
 
 .logos figure { height: unset; }
+.logos figcaption { text-align: center;}
 
 .img-clip { clip-path: polygon(0% 0%, 33.5% 0%, 33.5% 20%, 67% 20%, 67% 40%, 100% 40%, 100% 60%, 67% 60%, 67% 80%, 33.5% 80%, 33.5% 100%, 0% 100%, 0% 80%, 20% 80%, 33% 80%, 33.5% 60%, 67% 60%, 67% 40%, 33.5% 40%, 33.5% 20%, 0% 20%) ; }
 
@@ -86,7 +90,6 @@ figure img { height: inherit; object-fit: cover; }
 .speaker-profiles { align-items: center; }
 .speaker { display: flex; gap: 1rem; }
 .speaker .frame { padding-top: 0; }
-
 
 /* ====== COLOURS ====== */
 :root {
@@ -100,6 +103,7 @@ figure img { height: inherit; object-fit: cover; }
     --white: rgb(255, 255, 255);
 }
 .orange { color: var(--orange); }
+.platinum { color: var(--platinum); }
 
 
 
@@ -115,11 +119,14 @@ figure img { height: inherit; object-fit: cover; }
 
     .column-break.timeline { columns: unset; }
     .timeline time { min-width: unset; text-align: center; min-width: 30%; }
+    .horizontal { flex-direction: column; }
+    .horizontal > li { margin-bottom: 1em;}
+    .quote-strip { padding: 2em;}
 }
   
 /* Desktops and laptops ----------- */
 @media screen and (min-width : 960px) {
-    .hide-for-large { display: none; }
+    .hide-for-large { display: none;  }
 
     .timeline {
         list-style: none;
